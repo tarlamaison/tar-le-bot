@@ -12,8 +12,7 @@ export default class AppProvider implements BaseProvider {
       Logger.send('error', 'Failed to connect to database.');
     }
   }
-
-
+  
   public async load(Class: EntityResolvable): Promise<void> {
     Logger.send('info', `Load file ${Class.file?.relativePath}`);
   }
