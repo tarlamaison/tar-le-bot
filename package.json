@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/tarlamaison/tar-le-bot#readme",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "discord.js": "^13.6.0",
+    "dotenv": "^15.0.0"
   },
   "devDependencies": {
     "eslint": "^8.8.0"
