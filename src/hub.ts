@@ -1,11 +1,9 @@
 import { Command, BaseCommand } from 'ioc:factory/Core/Command'
 import { CommandInteraction } from 'discord.js'
 import { MessageEmbed } from 'discord.js'
-const dotenv = require('dotenv');
 const puppeteer = require('puppeteer');
 const moment = require('moment');
 
-dotenv.config();
 
 function get_obj_from_activity(activity, event, link: string) {
   const seats = parseInt(event.seats) - parseInt(event.nb_inscrits);
