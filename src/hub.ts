@@ -60,9 +60,11 @@ export default class Hub extends BaseCommand {
     const activities = await get_activities_from_link(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`, page);
     const embed = new MessageEmbed()
         .setColor('#0099ff')
+        .setTitle(`Hub ${city} :`)
+        .setURL(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`)
 
     for (const elem of activities) {
-      embed.addField(`${elem.title}`, `[${elem.seats.toString()} places disponibles](${elem.link})`);
+      embed.addField(elem.title, `[${elem.seats.toString()} places disponibles](${elem.link})`);
     }
     interaction.reply({embeds: [embed]});
     browser.close();
