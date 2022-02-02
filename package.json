@@ -1,22 +1,46 @@
 {
   "name": "tar-le-bot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Multi-purposes bot for the TAR community.",
+  "types": "contracts/**/*.d.ts",
+  "author": "Dorian 'Croos3r' Moy & Reza Rahemtola",
+  "license": "MIT",
+  "repository": "git@github.com:tarlamaison/tar-le-bot.git",
+  "keywords": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --quiet --transpile-only --clear --rs -- start/index.ts",
+    "start": "cross-env NODE_ENV=production node ./build/start/index.js",
+    "factory": "ts-node-dev --quiet --transpile-only -- factory.ts",
+    "build": "tsc",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "ava"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tarlamaison/tar-le-bot.git"
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "ava": "^3.15.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.23.0",
+    "eslint-plugin-ava": "^12.0.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
   },
-  "author": "Dorian Moy & Reza Rahemtola",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tarlamaison/tar-le-bot/issues"
-  },
-  "homepage": "https://github.com/tarlamaison/tar-le-bot#readme",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "@discord-factory/core-commands": "^2.0.1",
+    "@discord-factory/core-next": "^2.0.1",
+    "@leadcodedev/logger": "^1.0.0",
+    "discord.js": "13.1.0",
+    "module-alias": "^2.2.2"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "files": [
+      "test/**/*.spec.ts"
+    ]
   }
 }
