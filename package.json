@@ -1,0 +1,22 @@
+{
+  "name": "tar-le-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarlamaison/tar-le-bot.git"
+  },
+  "author": "Dorian Moy & Reza Rahemtola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarlamaison/tar-le-bot/issues"
+  },
+  "homepage": "https://github.com/tarlamaison/tar-le-bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
