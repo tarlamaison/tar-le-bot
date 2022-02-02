@@ -41,6 +41,11 @@ async function get_activities_from_link(link: string, page) {
     name: 'hub',
     description: 'Affiche les Workshops et Talks avec des places libres.',
     options: [
+      {
+        type: "STRING",
+        name: "ville",
+        description: "Obtenir les informations du Hub d'une ville particulière"
+      }
     ]
   }
 })
@@ -51,8 +56,10 @@ export default class Hub extends BaseCommand {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
+    let city = interaction.options.getString("ville");
+    city = (city == null) ? ("PAR") : city;
     await page.goto(`https://intra.epitech.eu/${process.env.INTRA_AUTH}`);
-    const activities = await get_activities_from_link("https://intra.epitech.eu/module/2021/B-INN-000/PAR-0-1/", page);
+    const activities = await get_activities_from_link(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`, page);
     const embed = new MessageEmbed()
         .setColor('#0099ff')
 
