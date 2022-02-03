@@ -4,6 +4,17 @@ import { MessageEmbed } from 'discord.js'
 const puppeteer = require('puppeteer');
 const moment = require('moment');
 
+function get_embed(activities, city) {
+  const embed = new MessageEmbed()
+  .setColor('#0099ff')
+  .setTitle(`Hub ${city} :`)
+  .setURL(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`)
+
+  for (const elem of activities) {
+    embed.addField(elem.title, `[${elem.seats.toString()} places disponibles](${elem.link})`);
+  }
+  return embed;
+}
 
 function get_obj_from_activity(activity, event, link: string) {
   const seats = parseInt(event.seats) - parseInt(event.nb_inscrits);
@@ -58,14 +69,7 @@ export default class Hub extends BaseCommand {
     city = (city == null) ? ("PAR") : city;
     await page.goto(`https://intra.epitech.eu/${process.env.INTRA_AUTH}`);
     const activities = await get_activities_from_link(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`, page);
-    const embed = new MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle(`Hub ${city} :`)
-        .setURL(`https://intra.epitech.eu/module/2021/B-INN-000/${city}-0-1/`)
-
-    for (const elem of activities) {
-      embed.addField(elem.title, `[${elem.seats.toString()} places disponibles](${elem.link})`);
-    }
+    const embed = get_embed(activities, city);
     interaction.reply({embeds: [embed]});
     browser.close();
   }
