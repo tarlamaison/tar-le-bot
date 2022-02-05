@@ -7,6 +7,7 @@
   "database": "tarlebot",
   "synchronize": true,
   "entities": [
+    "build/src/database/entities/*.ts",
     "src/database/entities/*.ts"
   ]
 }
