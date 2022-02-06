@@ -30,7 +30,6 @@ export default class AdminDossiersListCommand extends BaseCommand {
     const exposed = interaction.options.getUser('avec', false)?.id;
 
     if (page + 1 <= 0) {
-
       await interaction.reply({
         embeds: [
           new ErrorEmbed('Le numéro de la page doit être un entier strictement positif.'),

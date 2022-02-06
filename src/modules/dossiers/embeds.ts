@@ -8,7 +8,7 @@ export class DossierEmbed extends MessageEmbed {
       title: `Dossier #${dossier.id}: *${dossier.title}*`,
       timestamp: new Date(),
       image: {
-        url: `attachment://${dossier.id}`,
+        url: dossier.imageUri,
       },
       description: `${getExposedString(dossier.exposed)}.`,
     });
@@ -21,7 +21,9 @@ export class DossiersListEmbed extends MessageEmbed {
       title: 'Liste des dossiers de TAR.',
       fields: dossiers.map(dossier => ({
         name: `Dossier #${dossier.id}: ${dossier.title}`,
-        value: getExposedString(dossier.exposed),
+        value:
+            `Exposé${dossier.exposed.length > 1 ? 's' : ''}: ${getExposedString(dossier.exposed)}\n` +
+            `Lien de l'image: ${dossier.imageUri}`,
         inline: false,
       })),
       timestamp: new Date(),

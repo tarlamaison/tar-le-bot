@@ -10,4 +10,7 @@ export default class Dossier {
 
   @Column({ type: 'simple-array' })
   exposed: string[];
+
+  @Column()
+  imageUri: string;
 }
