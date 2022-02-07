@@ -6,7 +6,6 @@ export class ErrorEmbed extends MessageEmbed {
 
     super({
       title: 'Erreur: ',
-      timestamp: new Date(),
       color: 'DARK_RED',
       description,
     });

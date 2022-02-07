@@ -5,12 +5,14 @@ import { getExposedString } from 'App/modules/dossiers/utils';
 export class DossierEmbed extends MessageEmbed {
   constructor(dossier: Dossier) {
     super({
-      title: `Dossier #${dossier.id}: *${dossier.title}*`,
-      timestamp: new Date(),
+      title: `*${dossier.title}*`,
       image: {
         url: dossier.imageUri,
       },
       description: `${getExposedString(dossier.exposed)}.`,
+      footer: {
+        text: `Dossier #${dossier.id}`,
+      },
     });
   }
 }
@@ -26,7 +28,6 @@ export class DossiersListEmbed extends MessageEmbed {
             `Lien de l'image: ${dossier.imageUri}`,
         inline: false,
       })),
-      timestamp: new Date(),
       color: 'BLURPLE',
       footer: {
         text: `Page ${page}/${maxPage}`,

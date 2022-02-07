@@ -1,7 +1,7 @@
 import { BaseCommand, Command } from 'ioc:factory/Core/Command';
 import { CommandInteraction } from 'discord.js';
 import { IMAGE_URI_REGEX } from 'App/modules/dossiers/utils';
-import { ErrorEmbed } from 'App/utils/Embeds';
+import { ErrorEmbed } from 'App/utils/embeds';
 import { getRepository } from 'typeorm';
 import Dossier from 'App/database/entities/Dossier';
 import { DossierEmbed } from 'App/modules/dossiers/embeds';

@@ -1,6 +1,6 @@
 import { BaseCommand, Command } from 'ioc:factory/Core/Command';
 import { CommandInteraction } from 'discord.js';
-import { ErrorEmbed } from 'App/utils/Embeds';
+import { ErrorEmbed } from 'App/utils/embeds';
 import { getDossiersListPageDataFor } from 'App/modules/dossiers/provider';
 import { DossiersListEmbed } from 'App/modules/dossiers/embeds';
 
