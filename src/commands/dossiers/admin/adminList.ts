@@ -23,7 +23,7 @@ import { DossiersListEmbed } from 'App/modules/dossiers/embeds';
     ],
   },
 })
-export default class DossiersAdminList extends BaseCommand {
+export default class AdminListDossiersCommand extends BaseCommand {
   public async run(interaction: CommandInteraction): Promise<void> {
     const ephemeral = process.env.NODE_ENV != 'development';
     const page = (interaction.options.getInteger('page', false) ?? 1) - 1;

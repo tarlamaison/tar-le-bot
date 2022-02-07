@@ -43,7 +43,7 @@ import { DossierEmbed } from 'App/modules/dossiers/embeds';
     ],
   },
 })
-export default class DossiersAdminAdd extends BaseCommand {
+export default class AdminAddDossierCommand extends BaseCommand {
   public async run(interaction: CommandInteraction): Promise<void> {
     const ephemeral = process.env.NODE_ENV !== 'development';
     const title = interaction.options.getString('titre', true);

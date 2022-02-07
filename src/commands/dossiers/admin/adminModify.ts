@@ -40,7 +40,7 @@ import { DossierEmbed } from 'App/modules/dossiers/embeds';
     ],
   },
 })
-export default class DossierAdminModify extends BaseCommand {
+export default class AdminModifyDossierCommand extends BaseCommand {
   public async run(interaction: CommandInteraction): Promise<void> {
     const ephemeral = process.env.NODE_ENV !== 'development';
 
