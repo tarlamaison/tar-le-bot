@@ -11,3 +11,30 @@ export class ErrorEmbed extends MessageEmbed {
     });
   }
 }
+
+export class SuccessEmbed extends MessageEmbed {
+  constructor(message: string) {
+    super({
+      title: message,
+      color: 'GREEN',
+    });
+  }
+}
+
+export class FailureEmbed extends MessageEmbed {
+  constructor(message: string) {
+    super({
+      title: message,
+      color: 'RED',
+    });
+  }
+}
+
+export class FineEmbed extends MessageEmbed {
+  constructor(message: string) {
+    super({
+      title: message,
+      color: 'GREYPLE',
+    });
+  }
+}
