@@ -92,3 +92,6 @@ build
 
 # IDE
 .idea
+
+# TypeORM
+ormconfig.json
