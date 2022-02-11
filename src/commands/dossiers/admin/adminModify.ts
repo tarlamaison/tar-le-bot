@@ -2,7 +2,7 @@ import { BaseCommand, Command } from 'ioc:factory/Core/Command';
 import { CommandInteraction } from 'discord.js';
 import { getRepository } from 'typeorm';
 import Dossier from 'App/database/entities/Dossier';
-import { ErrorEmbed } from 'App/utils/embeds';
+import { ErrorEmbed, SuccessEmbed } from 'App/utils/embeds';
 import { DossierEmbed } from 'App/modules/dossiers/embeds';
 
 @Command({
@@ -94,10 +94,7 @@ export default class AdminModifyDossierCommand extends BaseCommand {
       await interaction.reply({
         ephemeral,
         embeds: [
-          {
-            title: 'Vous avez modifié un dossier !',
-            color: 'GREEN',
-          },
+          new SuccessEmbed('Vous avez modifié un dossier !'),
           new DossierEmbed(dossier),
         ],
       });

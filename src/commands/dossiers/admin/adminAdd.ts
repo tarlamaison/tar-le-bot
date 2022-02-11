@@ -1,7 +1,7 @@
 import { BaseCommand, Command } from 'ioc:factory/Core/Command';
 import { CommandInteraction } from 'discord.js';
 import { IMAGE_URI_REGEX } from 'App/modules/dossiers/utils';
-import { ErrorEmbed } from 'App/utils/embeds';
+import { ErrorEmbed, SuccessEmbed } from 'App/utils/embeds';
 import { getRepository } from 'typeorm';
 import Dossier from 'App/database/entities/Dossier';
 import { DossierEmbed } from 'App/modules/dossiers/embeds';
@@ -71,10 +71,7 @@ export default class AdminAddDossierCommand extends BaseCommand {
       await interaction.reply({
         ephemeral,
         embeds: [
-          {
-            title: 'Vous avez ajouté un nouveau dossier !',
-            color: 'GREYPLE',
-          },
+          new SuccessEmbed('Vous avez ajouté un nouveau dossier !'),
           new DossierEmbed(dossier),
         ],
       });
