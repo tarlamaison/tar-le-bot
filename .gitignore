@@ -7,6 +7,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# env file
+.env
+
 # Runtime data
 pids
 *.pid
@@ -89,3 +92,6 @@ build
 
 # IDE
 .idea
+
+# TypeORM
+ormconfig.json
