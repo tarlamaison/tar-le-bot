@@ -18,6 +18,5 @@ COPY factory.ts .
 # Copying assets
 COPY *.json ./
 
-RUN ls -lah
 RUN npm run build
 CMD ["npm", "run", "start"]
