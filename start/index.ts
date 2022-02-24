@@ -1,4 +1,6 @@
-import { Ignitor } from '@discord-factory/core-next'
+import { Ignitor } from '@discord-factory/core-next';
+import dotenv from 'dotenv';
 
-const ignitor = new Ignitor()
-ignitor.createFactory()
+dotenv.config();
+const ignitor = new Ignitor();
+ignitor.createFactory();

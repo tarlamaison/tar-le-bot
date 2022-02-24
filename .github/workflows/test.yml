@@ -1,0 +1,25 @@
+name: Tests
+
+on: [ fork, push, pull_request ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test --if-present
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag tar-le-bot:$(date +%s)
