@@ -1,4 +1,4 @@
-name: Linting
+name: Tests
 
 on: [ fork, push, pull_request ]
 
