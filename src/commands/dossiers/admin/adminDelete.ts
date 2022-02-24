@@ -21,6 +21,7 @@ import { DossierEmbed } from 'App/modules/dossiers/embeds';
   },
 })
 export default class AdminDelete extends BaseCommand {
+  // @ts-ignore
   public async run(interaction: CommandInteraction): Promise<void> {
     const ephemeral = process.env.NODE_ENV !== 'development';
     const dossiersRepository = await getRepository(Dossier);
