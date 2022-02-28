@@ -15,7 +15,6 @@ import { DossierEmbed } from 'App/modules/dossiers/embeds';
 export default class ShowRandomDossierCommand extends BaseCommand {
   // @ts-ignore
   public async run(interaction: CommandInteraction): Promise<void> {
-    const ephemeral = process.env.NODE_ENV !== 'development';
     const dossiers = await getRepository(Dossier).find();
     const dossier = dossiers[Math.floor(Math.random() * dossiers.length)];
 
@@ -25,7 +24,6 @@ export default class ShowRandomDossierCommand extends BaseCommand {
     }
     else {
       await interaction.reply({
-        ephemeral,
         embeds: [
           new DossierEmbed(dossier),
         ],
