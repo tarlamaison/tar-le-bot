@@ -1,26 +1,26 @@
 # Description
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context.
-List any dependencies that are required for this change.
+Merci pour votre contribution à tar le bot !
+Veuillez inclure un résumé de la modification et du problème résolu.
+Si des dépendances supplémentaires sont requises pour ce changement, mentionnez-le également ici.
 
-Fixes # (issue)
+Fix # (issue)
 
-## Type of change
+## Type de changement
 
-Please delete options that are not relevant.
+Veuillez supprimer les options qui ne sont pas pertinentes :
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+- [ ] Correction de bug (changement qui résout un problème sans impacter le fonctionnement actuel)
+- [ ] Nouvelle fonctionnalité (changement qui ajoute une fonctionnalité sans impacter le fonctionnement actuel)
+- [ ] Modification avec rupture (correction ou fonctionnalité qui empêcherait une fonctionnalité existante de fonctionner comme prévu)
+- [ ] Cette modification nécessite une mise à jour de la documentation
 
-# Checklist:
+# Checklist :
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] Mon code suit les directives de coding style de ce projet
+- [ ] J'ai effectué une auto-révision de mon code
+- [ ] J'ai commenté mon code, notamment dans les zones difficiles à comprendre
+- [ ] J'ai apporté les modifications correspondantes à la documentation si nécessaire
+- [ ] Mes modifications ne génèrent aucun nouveau warning/erreur
+- [ ] J'ai ajouté si nécessaire des tests qui prouvent que mon correctif est efficace ou que ma fonctionnalité fonctionne
+- [ ] Les tests unitaires existants passent localement avec mes modifications
