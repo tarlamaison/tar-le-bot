@@ -1,0 +1,26 @@
+# Description
+
+Merci pour votre contribution à tar le bot !
+Veuillez inclure un résumé de la modification et du problème résolu.
+Si des dépendances supplémentaires sont requises pour ce changement, mentionnez-le également ici.
+
+Fix # (issue)
+
+## Type de changement
+
+Veuillez supprimer les options qui ne sont pas pertinentes :
+
+- [ ] Correction de bug (changement qui résout un problème sans impacter le fonctionnement actuel)
+- [ ] Nouvelle fonctionnalité (changement qui ajoute une fonctionnalité sans impacter le fonctionnement actuel)
+- [ ] Modification avec rupture (correction ou fonctionnalité qui empêcherait une fonctionnalité existante de fonctionner comme prévu)
+- [ ] Cette modification nécessite une mise à jour de la documentation
+
+# Checklist :
+
+- [ ] Mon code suit les directives de coding style de ce projet
+- [ ] J'ai effectué une auto-révision de mon code
+- [ ] J'ai commenté mon code, notamment dans les zones difficiles à comprendre
+- [ ] J'ai apporté les modifications correspondantes à la documentation si nécessaire
+- [ ] Mes modifications ne génèrent aucun nouveau warning/erreur
+- [ ] J'ai ajouté si nécessaire des tests qui prouvent que mon correctif est efficace ou que ma fonctionnalité fonctionne
+- [ ] Les tests unitaires existants passent localement avec mes modifications
