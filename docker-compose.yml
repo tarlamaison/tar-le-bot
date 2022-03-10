@@ -1,0 +1,33 @@
+version: '3.1'
+services:
+  bot:
+    build: .
+    container_name: tarlebot
+    depends_on:
+      - database
+    restart: always
+    environment:
+      - 'TYPEORM_CONNECTION=mysql'
+      - 'TYPEORM_HOST=database'
+      - 'TYPEORM_PORT=3306'
+      - 'TYPEORM_USERNAME=root'
+      - 'TYPEORM_PASSWORD=root'
+      - 'TYPEORM_DATABASE=tarlebot'
+      - 'TYPEORM_SYNCHRONIZE=true'
+      - 'TYPEORM_ENTITIES=./build/src/database/entities/*.js'
+  database:
+    container_name: database
+    image: mariadb:10.7.3-focal
+    restart: always
+    volumes:
+      - db-data:/var/lib/mysql:rw
+    environment:
+      - 'MARIADB_USER=tarlebot'
+      - 'MARIADB_PASSWORD=tarlebot'
+      - 'MARIADB_ROOT_PASSWORD=root'
+      - 'MYSQL_DATABASE=tarlebot'
+    expose:
+      - 3306
+
+volumes:
+  db-data:

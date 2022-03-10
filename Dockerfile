@@ -1,22 +1,12 @@
 FROM node:lts
 
-# Creating workdir
-RUN mkdir -p /usr/tar-le-bot
-WORKDIR /usr/tar-le-bot
-
-# Copying package file
-COPY package.json .
-RUN npm install
+WORKDIR /home/tarlebot
 
 # Copying sources
-COPY src/ ./src
-COPY contracts/ ./contracts
-COPY providers/ ./providers
-COPY start/ ./start
-COPY factory.ts .
+COPY . .
 
-# Copying assets
-COPY *.json ./
+RUN ls -lah
 
+RUN npm install
 RUN npm run build
 CMD ["npm", "run", "start"]
