@@ -5,12 +5,8 @@ import { ErrorEmbed, SuccessEmbed } from 'App/utils/embeds';
 import { getRepository } from 'typeorm';
 import Dossier from 'App/database/entities/Dossier';
 import { DossierEmbed } from 'App/modules/dossiers/embeds';
-import permissions from 'App/utils/permissions';
 
 @Command({
-  permissions: [
-    // @ts-ignore
-    permissions.dossiers.admin ],
   scope: 'GUILDS',
   options: {
     name: 'admin-dossiers-add',
