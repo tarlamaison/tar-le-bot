@@ -3,13 +3,8 @@ import { CommandInteraction } from 'discord.js';
 import { ErrorEmbed } from 'App/utils/embeds';
 import { getDossiersListPageDataFor } from 'App/modules/dossiers/provider';
 import { DossiersListEmbed } from 'App/modules/dossiers/embeds';
-import permissions from 'App/utils/permissions';
 
 @Command({
-  permissions: [
-    // @ts-ignore
-    permissions.dossiers.admin,
-  ],
   scope: 'GUILDS',
   options: {
     name: 'admin-dossiers-list',
