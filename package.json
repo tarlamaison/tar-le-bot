@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@discord-factory/core-commands": "^2.0.1",
-    "@discord-factory/core-next": "^2.0.1",
+    "@discord-factory/core-next": "^4.0.1",
     "@leadcodedev/logger": "^1.0.0",
     "discord.js": "13.1.0",
     "module-alias": "^2.2.2",
